@@ -13,7 +13,7 @@ coctails = {"Long island": ["Teqilla", "Rum", "Vodka", "Gin", "Tripple sec", "Co
             "Gin sour": ["Gin", "Lemon juice", "Sugar syrup"],
             "Daiqiri": ["Rum", "Lime juice", "Sugar syrup"],
             "Electric lemonade": ["Vodka", "Lemon juice", "Sugar syrup", "Lemon-lime soda", "Blue curacao"],
-            "Teqila sunrise": ["Teqila", "Grenadine", "Orange juice"]}
+            "Teqilla sunrise": ["Teqilla", "Grenadine", "Orange juice"]}
 
 def get_coctail(val):
     for key, value in coctails.items():
@@ -38,6 +38,10 @@ def run(inp_bar):
 
     print("")
 
-for i in range(5):
-    test_vals = [bar[random.randrange(len(bar))] for i in range(random.randrange(1, len(bar)))]
-    run(test_vals)
+while True:
+    bar = input().split(", ")
+    run(bar)
+
+# for i in range(5):
+#     test_vals = [bar[random.randrange(len(bar))] for i in range(random.randrange(1, len(bar)))]
+#     run(test_vals)
